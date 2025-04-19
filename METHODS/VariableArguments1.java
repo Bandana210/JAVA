@@ -9,6 +9,7 @@ public class VariableArguments1 {
         }
     } 
 
+    // SUM OF ALL ELEMENTS 
     static void add(int y, int ...x){
 
         int sum=y;
@@ -18,6 +19,13 @@ public class VariableArguments1 {
         System.out.println(sum  +" is the sum of all passed elements");
 
     }
+
+    static void showL(String ...s){
+        for (int i=0;i<s.length;i++){
+            System.out.println((i+1) +"."+s[i]);
+        }
+    } 
+    // variable argument parameter must be last arguments
     public static void main(String[] args) {
         int a=23, b=33, c=99, d=98;
 
@@ -27,8 +35,12 @@ public class VariableArguments1 {
         show(a,b);
         System.out.println();
         show(a,b,c,d);
+        System.out.println(" ");
+        show(new int[]{2,3,4,5,6}); // anonymous array -- created for method use and then deleted -- no reference
+        System.out.println("\n");
+        showL("bandana", "tanu");
 
-        System.out.println("add");
+        System.out.println("\nadd");
         add(a,b);
         add(a,b,b);
         add(a,c,d,b);

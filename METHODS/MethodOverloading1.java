@@ -3,6 +3,8 @@
 // more than one methods with same name if -- no of paramters are different 
                                         //    -- different datatype of method
 
+                                        
+
 public class MethodOverloading1 {
 
     static int max(int a , int b){
